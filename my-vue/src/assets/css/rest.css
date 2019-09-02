@@ -1,0 +1,8 @@
+html,body,p,div,h1,h2,h3,h4,h5,ol,ul,dl,dd,dt,section{margin: 0;padding: 0;}
+ol,ul,dl{list-style: none;}
+a{text-decoration: none; }
+.clearfix{
+    overflow: hidden;
+    content: "";
+    clear: both;
+}
