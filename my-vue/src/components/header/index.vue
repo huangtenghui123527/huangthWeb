@@ -5,22 +5,11 @@
                 <img src="@/assets/img/heard/logo.png" alt="logo">
             </a>
         </div>
-        <header @click="gotoTec">
+        <header >
             <ul class="head-nav clearfix">
                 <li>
                     用户
                 </li>
-                <li>
-                    <span>关于个人</span>
-                </li>  
-                <li>
-                    <span>家庭专题</span>
-                </li>                            
-                 <li>
-                    <span>技术专题</span>
-                </li>
-
-
             </ul>
         </header>
     </div>
@@ -37,13 +26,12 @@ export default {
 <style lang="scss" scoped >
     #header{
         width: 100%;
-        // background: gradient(linear,center top,center bottom,from(#e44204), to(yellow),);
-        background: -webkit-gradient(linear,center top,center bottom,from(yellow), to(#e44204));
+        // background: -webkit-gradient(linear,center top,center bottom,from(yellow), to(#e44204));
+        // background: url("../../assets/img/heard/heard-bg.png") no-repeat;
         box-sizing: border-box;
         color: #333;
         display: flex;
         padding: 10px 15px 0 15px; 
-        border-bottom: 1px solid #000;
         #logo{
             flex: 0 0 60px;
             a,img{
@@ -64,12 +52,13 @@ export default {
                     letter-spacing: 5px;
                     span{
                         cursor: pointer;
+                        color:white ;
                         border-radius: 5px;
-                        border: 2px solid rgb(221, 118, 22);
+                        // border: 2px solid rgb(221, 118, 22);
                         padding: 5px 15px;
+                        
                         &:hover{
-                          border-color: #e44204;
-                          color: #e44204;  
+                          color: #e44204; 
                         }
                     }
                 }

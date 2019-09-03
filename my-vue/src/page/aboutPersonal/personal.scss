@@ -1,0 +1,156 @@
+#aboutPersonal{
+    position: relative;
+    #aboutUs{
+        margin-top: 40px;
+        text-align: center;
+        >p{
+            padding: 10px ;
+        }
+        dl{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            padding: 10px 0;
+            dd{
+                text-align: start;
+                h3{
+                    padding-bottom: 20px;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #A7A7A7;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    #service{
+        width: 100%;
+        height: 500px;
+        background: url("../../assets/img/personal/service.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        position: relative;
+        ul{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            font-weight: 300;
+            padding: 0 20px;
+            li{
+                background:rgba(224, 79, 12,0.5 );
+                height: 240px;
+                width: 200px;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+                .icon-p{
+                   padding: 40px 0;
+                }
+                .icon{
+                    font-size: 48px;
+                    padding: 30px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 30px transparent;
+                    transform: translate3d(0,0,0);
+                    transition: box-shadow .6s ease-in-out;
+                    background: rgba($color: #eee, $alpha: .3);
+                    &:hover{
+                        box-shadow: 0 0 0 20px transparent;
+                    }
+    
+                }
+            }
+        }
+
+    }
+    #events{
+        width: 100%;
+        height: 800px;
+        background: url("../../assets/img/personal/event.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+    }
+    #contacts{
+        width: 100%;
+        height: 800px;
+        background: url("../../assets/img/personal/contact.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+    }
+    .nav-list{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        margin-top: 20px;
+        li{
+            cursor: pointer;
+            border-top: 3px solid #fff;
+            float: right;
+            height: 100%;
+            line-height: 50px;
+            margin: 0 20px;
+            letter-spacing: 5px;
+            perspective: 720px;
+            &:hover{
+                background: rgba($color: #000000, $alpha: 0.2); 
+            }
+            &:hover span::before{
+                -webkit-transform: rotateX(10deg);	
+                -moz-transform: rotateX(10deg);
+                transform: rotateX(10deg);
+            }
+            span{
+                padding: 0 15px;
+                font-size: 19px;
+                color: #fff;
+                position: relative;
+                display: inline-block;
+                background:transparent;
+                box-shadow: inset 0 3px rgb(231, 233, 234);
+                -webkit-transition: background 0.6s;
+                -moz-transition: background 0.6s;
+                transition: background 0.6s;
+                -webkit-transform-origin: 50% 0;
+                -moz-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-transform-origin: 0% 50%;
+                -moz-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+                &:hover{
+                    color: #e44204;
+                }
+            }
+            span::before{
+                box-sizing: border-box;
+                padding: 0 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                color: #2f4351;
+                content: attr(data-hover);
+                -webkit-transform: rotateX(270deg);
+                -moz-transform: rotateX(270deg);
+                transform: rotateX(270deg);
+                -webkit-transition: -webkit-transform 0.6s;
+                -moz-transition: -moz-transform 0.6s;
+                transition: transform 0.6s;
+                -webkit-transform-origin: 0 0;
+                -moz-transform-origin: 0 0;
+                transform-origin: 0 0;
+                pointer-events: none;
+            }
+        }
+    }
+}
