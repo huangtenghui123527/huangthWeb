@@ -33,16 +33,162 @@
         </div>
         <div id="service">
             <ul>
-                <li>
+                <li class="icon-li">
                     <p class="icon-p">
                         <i class="icon iconfont  icon-home"></i>
                     </p>
                     <p>Home</p>
                 </li>
+                <li class="re-item">
+                     <dl class="re-item-front">
+                        <dt><img src="@/assets/img/personal/test-img1.png"  alt="coser"></dt>
+                        <dd class="re-item-job">coser</dd>
+                        <dd class="re-item-des">成为我们的合作coser，漫展返图，自由扩列，以及无偿拍摄&后期服务</dd>
+                    </dl>
+                    <div class="re-item-back">
+                        <img src="@/assets/img/personal/test-img3.png" alt="苏苏" />
+                    </div>
+                </li>
+                <li style="position: relative;">
+                </li>
             </ul>
         </div> 
-        <div id="events"></div> 
-        <div id="contacts"></div> 
+        <div id="events">
+            <div id="card-warper">
+                <div class="card">
+                    <div class="front">
+                        <h1>Signature</h1>
+                        <p>7.7 deck<span>2018</span></p>
+                        <p class="price">$ 89.00</p>
+                    </div>
+                    <div class="right">
+                    <h2>Signature</h2>
+                    <ul>
+                        <li>Width	7.7"</li>
+                        <li>Length	31.75"</li>
+                        <li>Wheelbase	14"</li>
+                        <li>Nose	6.875"</li>
+                        <li>Tail	6.25"</li>
+                    </ul>
+                    <button>Add to cart, yo</button>
+                    </div>                
+                </div>
+                <div class="img-wrapper">
+                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/577128/deck.png' alt=''>    
+                </div>
+            </div>
+            <div id="animt-3d">
+                  <div class="controls">
+                    <h1>Animations, Transitions and 3D Transforms</h1>
+                    <p>Toggle the Backfaces Visible checkbox to turn backfaces on and off using <code>-webkit-backface-visibility</code>.</p>
+                    <div><button @click="toggleShape()">Toggle Shape</button></div>
+                    <div><input type="checkbox" id="backfaces" @click="toggleBackfaces()" checked><label for="backfaces">Backfaces visible</label></div>
+                </div>
+                <div id="container">
+                    <div id="stage">
+                        <div id="shape" class="cube backfaces">
+                            <div class="plane one">1</div>
+                            <div class="plane two">2</div>
+                            <div class="plane three">3</div>
+                            <div class="plane four">4</div>
+                            <div class="plane five">5</div>
+                            <div class="plane six">6</div>
+                            <div class="plane seven">7</div>
+                            <div class="plane eight">8</div>
+                            <div class="plane nine">9</div>
+                            <div class="plane ten">10</div>
+                            <div class="plane eleven">11</div>
+                            <div class="plane twelve">12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="contacts">
+            <div class="view view-first">
+                <img src="@/assets/img/personal/gallery-img1.jpg">
+                <div class="mask">
+                    <h2>Hover Style #1</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+            <div class="view view-second">
+                <img src="@/assets/img/personal/gallery-img2.jpg">
+                <div class="mask"></div>
+                <div class="content">
+                    <h2>Hover Style #1</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-third">
+                <img src="@/assets/img/personal/gallery-img3.jpg">
+                <div class="mask">
+                    <h2>Hover Style #3</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-fourth">
+                <img src="@/assets/img/personal/gallery-img4.jpg">
+                <div class="mask">
+                    <h2>Hover Style #3</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-fifth">
+                <img src="@/assets/img/personal/gallery-img5.jpg">
+                <div class="mask">
+                    <h2>Hover Style #3</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-sixth">
+                <img src="@/assets/img/personal/gallery-img6.jpg">
+                <div class="mask">
+                    <h2>Hover Style #3</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-seventh">
+                <img src="@/assets/img/personal/gallery-img7.jpg">
+                <div class="mask">
+                    <h2>Hover Style #3</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-eighth">
+                <img src="@/assets/img/personal/gallery-img8.jpg">
+                <div class="mask">
+                    <h2>Hover Style #3</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+           <div class="view view-ninth">
+                <img src="@/assets/img/personal/gallery-img8.jpg">
+                <div class="mask mask-1"></div>
+                <div class="mask mask-2"></div>
+                <div class="content">
+                    <h2>Hover Style #9</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+             <div class="view view-tenth">
+                <img src="@/assets/img/personal/gallery-img8.jpg">
+                <div class="mask">
+                    <h2>Hover Style #10</h2>
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+            </div>
+        </div> 
     </div>
 </template>
 <script>
@@ -75,7 +221,57 @@ export default {
     },
     mounted(){
         this.swiper.slideTo(3, 1000, false)
-    }
+    },
+    methods:{
+        toggleBackfaces(){
+            var backfacesVisible = document.getElementById('backfaces').checked;
+            var shape = document.getElementById('shape');
+            if (backfacesVisible)
+                this.addClassName(shape, 'backfaces');
+            else
+                this.removeClassName(shape, 'backfaces');
+        },   
+        toggleShape(){
+            var shape = document.getElementById('shape');
+            if (this.hasClassName(shape, 'ring')) {
+                this.removeClassName(shape, 'ring');
+                this.addClassName(shape, 'cube');
+            } else {
+                this.removeClassName(shape, 'cube');
+                this.addClassName(shape, 'ring');
+            }
+            
+            // Move the ring back in Z so it's not so in-your-face.
+            var stage = document.getElementById('stage');
+            if (this.hasClassName(shape, 'ring'))
+                stage.style.webkitTransform = 'translateZ(-200px)';
+            else
+                stage.style.webkitTransform = '';
+        },
+        hasClassName(inElement, inClassName){
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+            return regExp.test(inElement.className);
+        },
+        addClassName(inElement, inClassName){
+            if (!this.hasClassName(inElement, inClassName))
+                inElement.className = [inElement.className, inClassName].join(' ');
+        },
+        removeClassName(inElement, inClassName){
+            if (this.hasClassName(inElement, inClassName)) {
+                var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+                var curClasses = inElement.className;
+                inElement.className = curClasses.replace(regExp, ' ');
+            }
+        },
+        toggleClassName(inElement, inClassName){
+            if (this.hasClassName(inElement, inClassName))
+                this.removeClassName(inElement, inClassName);
+            else
+                this.addClassName(inElement, inClassName);
+        }
+    },
+
+
 }
 </script>
 <style lang="scss" scoped>
