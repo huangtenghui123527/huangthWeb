@@ -1,0 +1,163 @@
+<template>
+    <div id="navLayout">
+        <!-- <nav-one :menuData="navList"></nav-one> -->
+        <nav-tow :menuDataTow="navList"></nav-tow>
+    </div>
+</template>
+<style lang="scss" scoped>
+#navLayout{
+    display: grid;
+    grid: auto / 1fr 1fr;
+}
+</style>
+<script>
+import NavOne from "./navOne"
+import NavTow from "./navTow"
+export default {
+    components:{
+        NavOne,
+        NavTow
+    },
+    data(){
+        return{
+            navList:[{
+                id:'jbgl',
+                name:"基本管理",
+                level:0,
+                isChildren:true,
+                url:'#',
+                icon:"iconfont icon-set",
+                isOpen:false,
+                children:[{
+                    id:'jbgl_wzpz',
+                    name:"网站配置",
+                    level:1,
+                    isChildren:true,
+                    url:'#',
+                    icon:"iconfont icon-users",
+                    isOpen:false,
+                    children:[{
+                        id:'jbgl_wzpz_info',
+                        name:"配置信息",
+                        level:2,
+                        isChildren:false,
+                        url:"#",
+                        isOpen:false
+                    }]
+                },{
+                    id:'jbgl_set',
+                    name:"管理设置",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:"jbgl_nav",
+                    name:"导航菜单",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },]
+            },{
+                id:'news',
+                name:"新闻中心",
+                level:0,
+                isChildren:true,
+                url:'#',
+                icon:"iconfont icon-new",
+                isOpen:false,
+                children:[{
+                    id:'news_artManage',
+                    name:"管理文章",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'news_artClass',
+                    name:"文章分类",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'news_artAdd',
+                    name:"添加文章",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                }]
+            },{
+                id:'product',
+                name:"最新产品",
+                level:0,
+                isChildren:true,
+                url:'#',
+                icon:"iconfont icon-table",
+                isOpen:false,
+                children:[{
+                    id:'product_imgManage',
+                    name:"图片管理",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'product_imgClass',
+                    name:"图片分类",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'product_imgAdd',
+                    name:"添加图片",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },]
+            },{
+                id:'column',
+                name:"栏目添加",
+                level:0,
+                isChildren:true,
+                url:'#',
+                icon:"iconfont icon-daohangshouqi",
+                isOpen:false,
+                children:[{
+                    id:'column_artSystem',
+                    name:"文章系统",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'column_imgSystem',
+                    name:"图片系统",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'column_formAdd',
+                    name:"添加表单",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },{
+                    id:'column_recSystem',
+                    name:"招聘系统",
+                    level:1,
+                    isChildren:false,
+                    url:'#',
+                    isOpen:false,
+                },]
+            },]
+        }
+    }
+}
+</script>

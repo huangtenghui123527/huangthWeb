@@ -4,7 +4,7 @@
             <tec-nav></tec-nav>
         </nav>
         <div class="tec-content">
-            <header class="tec-header">tab-content</header>
+            <header class="tec-header"><tab-list></tab-list></header>
             <article class="art-content">
                 <router-view></router-view>
             </article>
@@ -13,10 +13,15 @@
 </template>
 <script>
 import TecNav from '@/components/nav'
+import tabList from '@/components/tab'
 export default {
     name:"technologyContrany",
     components:{
-        TecNav
+        TecNav,
+        tabList
+    },
+    mounted(){
+        // this.$router.push({path:'/navLayout'})
     }
 }
 </script>
@@ -27,9 +32,8 @@ export default {
         justify-content: flex-start;
         .nav-left{
             flex: 0 1 200px;
-            background:rgb(90, 87, 245);
+            background:#222d32;
         }
-         
         .tec-content{
             flex: 1 1 auto;
             .tec-header,.art-content{
@@ -38,10 +42,11 @@ export default {
             }
             .tec-header{
                 padding: 10px;
-                background: white;
+                // background: #eee;
             }
             .art-content{
-                padding:0 10px;
+                padding:10px;
+                background: white;
             }
         }
     }

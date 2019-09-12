@@ -2,13 +2,13 @@ import HelloWorld from '@/components/HelloWorld'
 import Famlys from '@/page/famlys'
 import AboutPersonal from '@/page/aboutPersonal'
 import MyTechnology from '@/page/technology'
-import TecOne from '@/page/technology/TecOne'
+import NavLayout from '@/page/technology/navigates'
 
     var routes= [
         {
             path: '/',
             name: 'AboutPersonal',
-            component: AboutPersonal
+            component: AboutPersonal 
         },        
         {
             path: '/famlys',
@@ -19,9 +19,10 @@ import TecOne from '@/page/technology/TecOne'
             path: '/myTechnology',
             name: 'MyTechnology',
             component: MyTechnology,
+            redirect: '/myTechnology/navLayout',
             children:[{
-                path: 'tecOne',
-                component: TecOne,
+                path: 'navLayout',
+                component: NavLayout,
     
             }]
         }

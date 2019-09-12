@@ -1,17 +1,19 @@
 <template>
-    <div id="header">
+    <div id="header" class="satic-area">
+        <div class="dynamic-area1"></div>
+        <div class="dynamic-area2"></div>
         <div id="logo">
             <a href="javascript:;">
                 <img src="@/assets/img/heard/logo.png" alt="logo">
             </a>
         </div>
         <header >
-            <ul class="head-nav clearfix">
-                <li>
-                    用户
-                </li>
-            </ul>
-        </header>
+        <ul class="head-nav clearfix">
+            <li>
+                用户
+            </li>
+        </ul>
+    </header>
     </div>
 </template>
 <script>
@@ -24,14 +26,52 @@ export default {
 }
 </script>
 <style lang="scss" scoped >
+   .satic-area {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: url(../../assets/img/heard/poster-about-part.jpg) no-repeat center;
+        background-size: cover;
+    }
     #header{
         width: 100%;
         // background: -webkit-gradient(linear,center top,center bottom,from(yellow), to(#e44204));
-        // background: url("../../assets/img/heard/heard-bg.png") no-repeat;
+        // background: url("../../assets/img/heard/poster-about-part.jpg") no-repeat;
         box-sizing: border-box;
-        color: #333;
+        // color: #333;
         display: flex;
         padding: 10px 15px 0 15px; 
+        .dynamic-area1   {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            // background: url(../../assets/img/heard/poster-drop-animate2-part.png) repeat-x 0px 0px;
+            background-size: cover;
+            animation: posterDrop1 6000s linear infinite;
+        }
+
+        @keyframes posterDrop1 {
+            from { background-position: 0 0; }
+            to { background-position: 4000% 0; }
+        }
+
+        .dynamic-area2   {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            // background: url(../../assets/img/heard/poster-drop-animate1-part.png) repeat-x 0px 0px;
+            background-size: cover;
+            animation: posterDrop2 8000s linear infinite;
+        }
+
+        @keyframes posterDrop2 {
+            from { background-position: 0 0; }
+            to { background-position: 30000% 0; }
+        }
         #logo{
             flex: 0 0 60px;
             a,img{

@@ -1,0 +1,78 @@
+#tecNav{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    header{
+        display: grid;
+        grid:40px/1fr 1fr 1fr;
+        text-align: center;
+        align-items: center;
+        background: white;
+        font-weight: bold;
+        title{
+            display: block;
+            color: #000;
+            border-bottom: 1px solid transparent;
+        }
+    }
+    .nav-box{
+        position: relative;
+        li{
+            border-bottom:1px solid #869fb1;
+            cursor: pointer;
+            a{
+                color: white;
+                display: block;
+                overflow: hidden;
+                position: relative;
+                padding: 10px 0;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                -o-transition: all .5s;
+                &:hover{
+                    background: #357dd7;
+                }
+                &:hover::before{
+                    left: -30px;
+                }
+                span{
+
+                    display: block;
+                    position: relative;
+                    left: 10px;
+                    z-index: 1;
+                }
+            }
+            a:before{
+                content: '';
+                position: absolute;
+                left: - -240px;
+                top: 0px;
+                width: 200px;
+                height: 100%;
+                background: #629feb;
+                z-index: 1;
+                transform: skew(30deg, 0);
+                -webkit-transform: skew(30deg, 0);
+                -moz-transform: skew(30deg, 0);
+                -o-transform: skew(30deg, 0);
+                -ms-transform: skew(30deg, 0);
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                -o-transition: all .5s;
+            }
+            a:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 30px;
+                left: 0;
+                top: 20px;
+                z-index: 1; 
+            }
+        }
+       
+    }
+}
