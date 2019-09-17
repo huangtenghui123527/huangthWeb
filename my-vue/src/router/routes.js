@@ -24,6 +24,9 @@ import NavLayout from '@/page/technology/navigates'
                 path: 'navLayout',
                 component: NavLayout,
     
+            },{
+                path:"transtion",
+                component:()=>import("@/page/technology/transtions")
             }]
         }
     ]

@@ -35,16 +35,16 @@ export default {
                 url:'navLayout',
                 isOpen:false
             },{
-                name:"目录二",
+                name:"过度动画",
                 level:0,
                 isChildren:true,
                 url:'#',
                 isOpen:true,
                 children:[{
-                    name:"目录二-一",
+                    name:"过度案例",
                     level:1,
                     isChildren:false,
-                    url:'#',
+                    url:'transtion',
                     isOpen:false,
                 },{
                     name:"目录二-二",
