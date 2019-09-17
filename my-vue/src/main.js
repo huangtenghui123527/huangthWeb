@@ -3,10 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import $tool from '@/assets/js/tool';
 
+import  "@/assets/js/directive"
 import "@/assets/css/rest.css"
 import "@/assets/font/iconfont.css"
-Vue.config.productionTip = false
+
+// Vue.use($t)
+Vue.config.productionTip = false;
+Vue.prototype.$t=$tool;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
