@@ -47,10 +47,10 @@ export default {
                     url:'transtion',
                     isOpen:false,
                 },{
-                    name:"目录二-二",
+                    name:"旋转案例",
                     level:1,
                     isChildren:false,
-                    url:'#',
+                    url:'rotat3d',
                     isOpen:false,
                 },{
                     name:"目录二-三",

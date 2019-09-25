@@ -1,14 +1,17 @@
 <template>
     <div>
         <card-reversal></card-reversal>
+        <book-reversal></book-reversal>
     </div>
 </template>
 <script>
+import bookReversal from './bookReversal'
 import cardReversal from "./cardReversal"
 export default {
     name:"transtions",
     components:{
-        cardReversal
+        cardReversal,
+        bookReversal
     },
     data(){
         return{

@@ -23,10 +23,12 @@ import NavLayout from '@/page/technology/navigates'
             children:[{
                 path: 'navLayout',
                 component: NavLayout,
-    
             },{
                 path:"transtion",
                 component:()=>import("@/page/technology/transtions")
+            },{
+                path:"rotat3d",
+                component:()=>import("@/page/technology/rotat3d")
             }]
         }
     ]
