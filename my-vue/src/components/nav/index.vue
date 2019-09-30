@@ -60,13 +60,13 @@ export default {
                     isOpen:false,
                 }]
             },{
-                name:"目录三",
+                name:"表单控件",
                 level:0,
                 isChildren:true,
                 url:'#',
                 isOpen:false,
                 children:[{
-                    name:"目录三-一",
+                    name:"三级联动",
                     level:1,
                     isChildren:false,
                     url:'#',

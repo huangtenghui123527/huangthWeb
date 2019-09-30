@@ -4,12 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $tool from '@/assets/js/tool';
+import iView from 'iview';
+
+import 'iview/dist/styles/iview.css'
 
 import  "@/assets/js/directive"
 import "@/assets/css/rest.css"
 import "@/assets/font/iconfont.css"
 
-// Vue.use($t)
+Vue.use(iView)
 Vue.config.productionTip = false;
 Vue.prototype.$t=$tool;
 /* eslint-disable no-new */
