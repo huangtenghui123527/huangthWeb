@@ -1,5 +1,10 @@
 #aboutPersonal{
     position: relative;
+    #fullpage{
+       img{
+          width: 100%;
+       }
+    }
     #aboutUs{
         margin-top: 40px;
         text-align: center;
@@ -506,6 +511,8 @@
         background: url("../../assets/img/personal/contact.jpg") no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
+        padding-left: 85px;
+        padding-top: 20px;
         .view {
             width: 260px;
             height: 200px;

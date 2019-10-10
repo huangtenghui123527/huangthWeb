@@ -25,10 +25,13 @@ import NavLayout from '@/page/technology/navigates'
                 component: NavLayout,
             },{
                 path:"transtion",
-                component:()=>import("@/page/technology/transtions")
+                component:()=>import("@/page/technology/transtionAnimation/transtions")
             },{
                 path:"rotat3d",
-                component:()=>import("@/page/technology/rotat3d")
+                component:()=>import("@/page/technology/transtionAnimation/rotat3d")
+            },{
+                path:"level3",
+                component:()=>import("@/page/technology/aboutForm/level3")
             }]
         }
     ]

@@ -11,6 +11,7 @@ import 'iview/dist/styles/iview.css'
 import  "@/assets/js/directive"
 import "@/assets/css/rest.css"
 import "@/assets/font/iconfont.css"
+import '@/mock'; // mock数据
 
 Vue.use(iView)
 Vue.config.productionTip = false;

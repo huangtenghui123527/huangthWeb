@@ -69,7 +69,7 @@ export default {
                     name:"三级联动",
                     level:1,
                     isChildren:false,
-                    url:'#',
+                    url:'level3',
                     isOpen:false,
                 },{
                     name:"目录三-二",
