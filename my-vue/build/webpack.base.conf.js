@@ -47,8 +47,17 @@ module.exports = {
         loaders: ['style', 'css', 'sass','scss']
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: [resolve('src/icons')],//只有src/icons下的svg使用svg-sprite-loader编译
+        options: { //编译时把svg的文件名前添加上icon，方便使用
+          symbolId: 'icon-[name]'
+        }
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
+        exclude: [resolve('src/icons')],
         options: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')

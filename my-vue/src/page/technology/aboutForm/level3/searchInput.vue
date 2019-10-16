@@ -68,18 +68,6 @@ export default {
     .inputBtn{
         position: relative;
         width: 300px;
-        .my-input-btn{
-            position: absolute;
-            right:0;
-            top: 0;
-            width: 30px;
-            height: 30px;
-            background: rgba($color: #000000, $alpha: 0);
-            z-index: 1;
-            &:hover{
-                cursor: pointer;
-            }
-        }
         .my-icon{
             display: block;
             width: 10px;
@@ -91,6 +79,8 @@ export default {
             top: 35px;
             left: 25%;
             transform: rotate(45deg);
+            z-index: 99;
+
         }
         .my-select{
             position: absolute;
@@ -102,20 +92,7 @@ export default {
             padding: 10px;
             box-shadow: 2px 3px 2px #999;
             border: 1px solid #ccc;
-            // &::before{
-            //     content: '';
-            //     display: block;
-            //     width: 10px;
-            //     height: 10px;
-            //     background: #fff;
-            //     border-left: 1px solid #999;
-            //     border-top: 1px solid #999;
-            //     position: absolute;
-            //     top: -3px;
-            //     left: 50%;
-            //     transform: rotate(45deg) translateX(-50%);
-            //     z-index: 999;
-            // }
+            z-index: 9;
             li{
                 padding: 5px 0;
                 width: 100%;

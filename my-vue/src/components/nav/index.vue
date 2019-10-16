@@ -1,23 +1,23 @@
 <template>
     <div id="tecNav">
-        <header>
-            <i class="iconfont icon-pc"></i>
-            <title>菜单头</title>
-            <i class="iconfont icon-daohangshouqi"></i>
-        </header>
-        <ul class="nav-box">
-            <li v-for="(item,key) of menu" :key="key">
+        <Menu theme="light" :open-names="['1']" accordion >
+            <div v-for="(item,index) of menu" :key="index" >
                 <div v-if="item.isChildren">
-                    <children-nav :childeObj="item" :data="item.children"></children-nav>
+                    <Submenu :name="index" >
+                        <template slot="title">
+                            <Icon :type="item.icon" /> {{item.name}}
+                        </template>
+                        <children-nav :childeObj="item" :data="item.children" :index="index"></children-nav>
+                    </Submenu>
                 </div>
                 <div v-else >
-                    <router-link :to="{path:item.url}" @click="addTab(item.name)">
+                    <!-- <router-link :to="{path:item.url}" @click="addTab(item.name)">
                         <span>{{item.name}}</span>
-                    </router-link>
+                    </router-link> -->
+                    <MenuItem :name="index" :to="{path:item.url}" @click.native="addTab(item.name)">{{item.name}}</MenuItem>
                 </div>
-            </li>
-        </ul>
-
+            </div>
+        </Menu>
     </div>
 </template>
 <script>
@@ -29,10 +29,10 @@ export default {
     data(){
         return{
             menu:[{
-                name:"导航案例",
+                name:"首页",
                 level:0,
                 isChildren:false,
-                url:'navLayout',
+                url:'home',
                 isOpen:false
             },{
                 name:"过度动画",
@@ -40,6 +40,7 @@ export default {
                 isChildren:true,
                 url:'#',
                 isOpen:true,
+                icon:'md-american-football',
                 children:[{
                     name:"过度案例",
                     level:1,
@@ -60,22 +61,23 @@ export default {
                     isOpen:false,
                 }]
             },{
-                name:"表单控件",
+                name:"相关组件",
                 level:0,
                 isChildren:true,
                 url:'#',
                 isOpen:false,
+                icon:'md-aperture',
                 children:[{
-                    name:"三级联动",
+                    name:"表单控件",
                     level:1,
                     isChildren:false,
                     url:'level3',
                     isOpen:false,
                 },{
-                    name:"目录三-二",
+                    name:"导航案例",
                     level:1,
                     isChildren:false,
-                    url:'#',
+                    url:'navLayout',
                     isOpen:false,
                 }]
             }]
@@ -91,6 +93,9 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-   @import "./navigate.scss";
+<style lang="scss">
+.ivu-menu-submenu-title>i{
+    font-size: 20px;
+}
+//    @import "./navigate.scss";
 </style>

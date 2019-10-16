@@ -3,7 +3,7 @@
         <ul class="nav-list" id="navList">
             <li>
                 <span data-hover="我的家庭">
-                   <router-link :to="'/myTechnology'">我的家庭</router-link>
+                   <router-link :to="'/famlys'">我的家庭</router-link>
                 </span>
             </li>                            
                 <li>
@@ -13,7 +13,7 @@
             </li>
             <li>
                 <span data-hover="关于个人">
-                   <router-link :to="'/myTechnology'">关于个人</router-link>
+                   <router-link :to="'/'">关于个人</router-link>
                 </span>
             </li>  
         </ul>
@@ -30,11 +30,16 @@
                 <h2>About Us</h2>
                 <p >关于自己介绍</p>
                 <dl>
-                    <dt><img src="@/assets/img/personal/about-img.jpg" alt="about-img"></dt>
+                    <dt><img src="@/assets/img/personal/self.png" alt="self"></dt>
                     <dd>
-                        <h3>were're the best</h3>
-                        <p>letter one</p>
-                        <p>letter tow</p>
+                        <h3>web前端工程师</h3>
+                        <p><label >姓&emsp;名&emsp;:</label><span>&emsp;黄腾辉</span></p>
+                        <p><label >年&emsp;龄&emsp;:</label><span>&emsp;27</span></p>
+                        <p><label >籍&emsp;贯&emsp;:</label><span>&emsp;湖南湘西自治州</span></p>
+                        <p><label >学&emsp;历&emsp;:</label><span>&emsp;本科</span></p>
+                        <p><label >现居地&emsp;:</label><span>&emsp;深圳宝安</span></p>
+                        <p><label >简&emsp;介&emsp;:</label><span>&emsp;出生于湖南湘西自治州保靖县清水坪镇下码村，毕业于赣南师范大学通信工程专业。现就职于万华汽车服务有限公司。</span></p>
+                        <p>Born in Xiama village, Qingshuiping Town, Baojing County, Xiangxi Autonomous Prefecture, Hunan Province, graduated from Gannan Normal University in communication engineering. Now working in Wanhua Automobile Service Co. Ltd.</p>
                     </dd>
                 </dl>
             </div>

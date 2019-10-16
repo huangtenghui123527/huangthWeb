@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import $tool from '@/assets/js/tool';
+import tool from '@/assets/js/tool';
 import iView from 'iview';
 
 import 'iview/dist/styles/iview.css'
@@ -13,9 +13,11 @@ import "@/assets/css/rest.css"
 import "@/assets/font/iconfont.css"
 import '@/mock'; // mock数据
 
+import './icons' // iconSvg
+
 Vue.use(iView)
 Vue.config.productionTip = false;
-Vue.prototype.$t=$tool;
+Vue.prototype.$t=tool;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

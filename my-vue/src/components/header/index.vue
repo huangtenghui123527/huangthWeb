@@ -35,19 +35,16 @@ export default {
     }
     #header{
         width: 100%;
-        // background: -webkit-gradient(linear,center top,center bottom,from(yellow), to(#e44204));
-        // background: url("../../assets/img/heard/poster-about-part.jpg") no-repeat;
         box-sizing: border-box;
         // color: #333;
         display: flex;
-        padding: 10px 15px 0 15px; 
+        padding: 10px 10px 0; 
         .dynamic-area1   {
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            // background: url(../../assets/img/heard/poster-drop-animate2-part.png) repeat-x 0px 0px;
             background-size: cover;
             animation: posterDrop1 6000s linear infinite;
         }
@@ -73,7 +70,7 @@ export default {
             to { background-position: 30000% 0; }
         }
         #logo{
-            flex: 0 0 60px;
+            flex: 0 0 100px;
             a,img{
                 width: 100%;
                 height: initial;

@@ -20,7 +20,7 @@ export default {
     background: url("./assets/img/bg.jpg") repeat;
   }
   #app{
-    max-width: 1580px;
+    width: 1580px;
     // min-height: 1000px;
     margin: 0 auto;
     background: #eee;

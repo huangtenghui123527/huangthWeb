@@ -32,7 +32,7 @@ export default {
         justify-content: flex-start;
         .nav-left{
             flex: 0 1 200px;
-            background:#222d32;
+            // background:#222d32;
         }
         .tec-content{
             flex: 1 1 auto;
@@ -46,7 +46,6 @@ export default {
             }
             .art-content{
                 padding:10px;
-                background: white;
             }
         }
     }

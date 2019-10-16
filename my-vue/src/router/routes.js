@@ -1,8 +1,10 @@
 import HelloWorld from '@/components/HelloWorld'
 import Famlys from '@/page/famlys'
+
 import AboutPersonal from '@/page/aboutPersonal'
+
 import MyTechnology from '@/page/technology'
-import NavLayout from '@/page/technology/navigates'
+import Home from '@/page/technology/home'
 
     var routes= [
         {
@@ -19,10 +21,13 @@ import NavLayout from '@/page/technology/navigates'
             path: '/myTechnology',
             name: 'MyTechnology',
             component: MyTechnology,
-            redirect: '/myTechnology/navLayout',
+            redirect: '/myTechnology/home',
             children:[{
+                path:'home',
+                component:Home
+            },{
                 path: 'navLayout',
-                component: NavLayout,
+                component:()=>import("@/page/technology/navigates")
             },{
                 path:"transtion",
                 component:()=>import("@/page/technology/transtionAnimation/transtions")
