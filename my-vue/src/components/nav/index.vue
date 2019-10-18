@@ -1,20 +1,17 @@
 <template>
     <div id="tecNav">
-        <Menu theme="light" :open-names="['1']" accordion >
+        <Menu theme="light" :active-name="activeName" accordion >
             <div v-for="(item,index) of menu" :key="index" >
                 <div v-if="item.isChildren">
-                    <Submenu :name="index" >
+                    <Submenu :name="item.name" >
                         <template slot="title">
                             <Icon :type="item.icon" /> {{item.name}}
                         </template>
-                        <children-nav :childeObj="item" :data="item.children" :index="index"></children-nav>
+                        <children-nav :childeObj="item" :data="item.children" ></children-nav>
                     </Submenu>
                 </div>
                 <div v-else >
-                    <!-- <router-link :to="{path:item.url}" @click="addTab(item.name)">
-                        <span>{{item.name}}</span>
-                    </router-link> -->
-                    <MenuItem :name="index" :to="{path:item.url}" @click.native="addTab(item.name)">{{item.name}}</MenuItem>
+                    <MenuItem :name="item.name" :to="{path:item.url}" @click.native="$root.$gFun.addTab(item)">{{item.name}}</MenuItem>
                 </div>
             </div>
         </Menu>
@@ -28,12 +25,13 @@ export default {
     },
     data(){
         return{
+            activeName:this.$root.$gData.data.activeName,
             menu:[{
                 name:"首页",
                 level:0,
                 isChildren:false,
                 url:'home',
-                isOpen:false
+                isOpen:true
             },{
                 name:"过度动画",
                 level:0,
@@ -83,13 +81,13 @@ export default {
             }]
         }
     },
+    mounted(){
+        let _this=this;
+        this.$root.eventHub.$on('meunNameChange', function(name){
+            _this.activeName=name;
+        })
+    },
     methods:{
-        addTab(tabName){
-            console.log(tabName)
-            // this.$root.$data.tabName=tabName;
-            // this.$router.push({path:'/myTechnology/navLayout'})
-            this.$root.eventHub.$emit('eventName', tabName);
-        }
     }
 }
 </script>

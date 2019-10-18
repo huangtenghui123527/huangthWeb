@@ -1,4 +1,6 @@
-var tool={
+import globle from "./gloData";
+var fun={
+    data:globle.data,
    /**
     * 计算当前列表长度
     * @param {Array} arr 
@@ -28,8 +30,34 @@ var tool={
                 this.getParentData(item.children,id)
             }
         }
-        
+    },
+    addTab(Otab){
+        this.clearSelect();
+        Otab.isOpen=true;
+        this.data.tabArray.push(Otab);
+        // this.data.activeName= Otab.name;
+
+    },
+    deleteTab(Otab){
+        let Atab=this.data.tabArray;
+        let index=0;
+        for(let i in Atab){
+            if(Atab[i]==Otab){
+                Atab.splice(i,1);
+                index=i
+                break;
+            }
+        }
+        if(index!=0){
+            Atab[index-1].isOpen=true;
+        }
+    },
+    clearSelect(){
+        let Atab=this.data.tabArray;
+        for(let item of Atab){
+            item.isOpen=false
+        }
     }
 }
 
-export default tool;
+export default fun;

@@ -2,7 +2,7 @@
 <div id="childrenNav">
     <div v-for="(item,key) of data" :key="key">
         <div v-if="item.isChildren">
-             <Submenu :name="index+'-'+key" >
+             <Submenu :name="item.name" >
                 <template slot="title">
                     <Icon :type="item.icon" /> {{item.name}}
                 </template>
@@ -10,7 +10,7 @@
             </Submenu>
         </div>
          <div v-else >
-            <MenuItem :name="index+'-'+key" :to="{path:item.url}" @click.native="addTab(item.name)">{{item.name}}</MenuItem>
+            <MenuItem :name="item.name" :to="{path:item.url}" @click.native="$root.$gFun.addTab(item)">{{item.name}}</MenuItem>
         </div>
     </div>
     
@@ -28,9 +28,9 @@ export default {
             type:Object,
              default:()=>{return {}}
         },
-        index:{
-            type:Number
-        }
+        // index:{
+        //     type:Number
+        // }
     },
     data(){
         return{
@@ -44,12 +44,10 @@ export default {
         open(obj){
            this.childeObj.isOpen= !obj.isOpen
         },
-        addTab(tabName){
-            console.log(tabName);
-            
-            // this.$root.$data.tabName=tabName;
-            this.$root.eventHub.$emit('eventName', tabName)
-        }
+        // addTab(Otab){
+        //     // this.$root.$data.tabName=tabName;
+        //     this.$root.eventHub.$emit('eventName', Otab.name)
+        // }
     }
 }
 </script>

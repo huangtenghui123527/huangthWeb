@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import tool from '@/assets/js/tool';
+import gloFun from '@/assets/js/gloFun';
+import gloData from '@/assets/js/gloData';
 import iView from 'iview';
 
 import 'iview/dist/styles/iview.css'
@@ -17,7 +18,8 @@ import './icons' // iconSvg
 
 Vue.use(iView)
 Vue.config.productionTip = false;
-Vue.prototype.$t=tool;
+Vue.prototype.$gFun=gloFun;
+Vue.prototype.$gData=gloData;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

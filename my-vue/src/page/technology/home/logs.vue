@@ -1,7 +1,10 @@
 <template>
     <div id="logs">
         <div class="logs-warrper">
-            <header>更新日志</header>
+            <div class="log-title">
+                <Icon type="logo-github" />
+                <span>更新日志</span>
+            </div>
             <ul>
                 <li v-for="(item,index) of logsData" :key="index">
                     <div><label>日期：</label><span>{{item.createTime}}</span></div>
@@ -44,7 +47,7 @@ export default {
             box-shadow: 2px 3px 2px #999;
             height: 100%;
             overflow: hidden;
-            header{
+            .log-title{
                 border-bottom: 1px solid #ccc;
                 padding: 15px 0;
                 text-align: center;
