@@ -1,6 +1,6 @@
 <template>
         <div class="reportList">
-            <ul class="fistUl">
+            <ul class="fistUl clearfix">
                 <li v-for="(item,index) of reportList" :key="index" :style="item.backStyle">
                     <div class="leftIitem">
                         <p class="investor">{{item.name}}</p>
@@ -57,16 +57,19 @@ export default {
         background: white;
         .fistUl{
             padding: 15px 0;
-            display: grid;
-            grid-template-rows: 80px;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            height: 120px;
+            // display: grid;
+            // grid-template-rows: 80px;
+            // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             li{
                 border-radius: 5px;
                 margin: 0 10px;
                 height: 100%;
+                width: 15%;
                 font-weight: bold;
                 color: white;
                 background: #edafda linear-gradient(to right, #edacda, #edaf9a);
+                float: left;
                 .leftIitem{
                     float: left;
                     width: 80%;

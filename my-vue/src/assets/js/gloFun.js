@@ -32,24 +32,27 @@ var fun={
         }
     },
     addTab(Otab){
+        let flag=this.removalDup(Otab);
         this.clearSelect();
         Otab.isOpen=true;
-        this.data.tabArray.push(Otab);
-        // this.data.activeName= Otab.name;
-
+        if(flag){
+            this.data.tabArray.push(Otab);
+        }
     },
     deleteTab(Otab){
         let Atab=this.data.tabArray;
         let index=0;
         for(let i in Atab){
-            if(Atab[i]==Otab){
+            if(Atab[i]==Otab&&i>0){
                 Atab.splice(i,1);
                 index=i
                 break;
             }
         }
-        if(index!=0){
+        if(index>0){
             Atab[index-1].isOpen=true;
+        }else{
+            Atab[0].isOpen=true;
         }
     },
     clearSelect(){
@@ -57,6 +60,19 @@ var fun={
         for(let item of Atab){
             item.isOpen=false
         }
+        if(Atab.length==1){
+            Atab[0].isOpen=true;
+        }
+    },
+    removalDup(Otab){
+        let Atab=this.data.tabArray;
+        // Atab.indexOf(Otab)
+        for(let item of Atab){
+            if(item.name==Otab.name){
+                return false;
+            }
+        }
+        return true;
     }
 }
 

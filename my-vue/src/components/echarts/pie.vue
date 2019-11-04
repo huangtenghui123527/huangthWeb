@@ -100,10 +100,11 @@
 </script>
 
 <style lang="scss">
-    .orderArea{
-         padding: 15px;
-        border-radius: 5px;
-        background: white;
-        margin-left: 15px;
-    }
+    // .orderArea{
+    //      padding: 15px;
+    //     border-radius: 5px;
+    //     background: white;
+	// 	margin-left: 15px;
+	// 	// height: 300px;
+    // }
 </style>

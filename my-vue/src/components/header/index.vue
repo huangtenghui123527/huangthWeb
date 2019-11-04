@@ -30,7 +30,7 @@ export default {
         position: relative;
         width: 100%;
         height: 100%;
-        background: url(../../assets/img/heard/poster-about-part.jpg) no-repeat center;
+        background: url(../../assets/img/heard/header.png) no-repeat center ;
         background-size: cover;
     }
     #header{

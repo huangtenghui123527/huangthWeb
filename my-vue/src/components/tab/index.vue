@@ -2,9 +2,9 @@
     <div id="tab-list">
         <ul class="clearfix">
             <li v-for="(item,index) of tabList" :key="index" :class="item.isOpen?'active':''">
-                <a href="javascript:;">
+                <a href="javascript:;" @click="selectTab(item)">
                     <span>{{item.name}}</span>
-                    <Icon type="md-close"  @click.native="$root.$gFun.deleteTab(item);selectTab()" />
+                    <Icon type="md-close"  @click.native.stop="$root.$gFun.deleteTab(item);delTab()" />
                 </a>
             </li>
         </ul>
@@ -22,11 +22,15 @@ export default {
         // console.log(this.$root.$gData);
     },
     methods:{
-        selectTab(){
+        delTab(){
             let newTab=this.$root.$gData.data.tabArray;
             let len=newTab.length;
             this.$router.push({path:'/myTechnology/'+newTab[len-1].url});
             this.$root.eventHub.$emit("meunNameChange",newTab[len-1].name)
+        },
+        selectTab(obj){
+            console.log(obj);
+            
         }
     }
 }
